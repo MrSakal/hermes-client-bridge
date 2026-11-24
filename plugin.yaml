@@ -1,0 +1,20 @@
+name: client-bridge
+version: "2.0.0"
+description: >
+  Multi-client Desktop OS, filesystem, clipboard, and warm-shell PTY bridge for
+  Hermes servers. Deterministically identifies which Hermes Desktop client machine
+  the user is writing from and executes file, clipboard, and terminal operations on
+  that client with zero-latency event push and adaptive long-polling.
+author: MrSakal
+license: MIT
+homepage: https://github.com/MrSakal/hermes-client-bridge
+requires_hermes: ">=0.22.0"
+tags: [desktop, bridge, remote, terminal, filesystem, clipboard]
+provides_tools:
+  - client_list_machines
+  - client_exec
+  - client_read_file
+  - client_write_file
+  - client_list_dir
+provides_hooks:
+  - pre_llm_call
